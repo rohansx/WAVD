@@ -1,0 +1,16 @@
+{
+  "name": "trial_wavs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node wavs_proxy.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^7.2.0",
+    "ejs": "^3.1.6",
+    "hoxy": "^3.3.1"
+  }
+}

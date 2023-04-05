@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 0;
+    /* margin: 0; */
+    text-shadow: 4px 4px #645f5f;
+}
+
+.subheading {
+    text-align: center;
+    margin-top: -20pt;
+    -webkit-text-stroke: 0.05px #454545;
+    /* text-shadow: 2px 1px #000; */
+    /* text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000; */
+}
+.text-yellow {
+    color: #E3AE57;
+}
+
+.text-light {
+	color: #fdd0ad;
+}
+.text-red {
+    color: #E9724C;
+}
+.text-dark {
+    color: #000000;
+}
+
+.column {
+  /* float: center; */
+  /* width: 90%; */
+  margin: 0 50px 20px 50px;
+  padding: 20px;
+  /* position: relative; */
+  background-color: #fdd0ad;
+  border-radius: 5px;
+
+}
+#input-container {
+
+  display: flex;
+  flex-direction: row; /* Changed to row to align input and button horizontally */
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#key {
+  width: 400px; /* Increased width of input box */
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 10px; /* Added margin to create space between input and button */
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Added box shadow */
+}
+
+input[type="submit"] {
+  background-color: black;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Added box shadow */
+}
+
+
+input[type="submit"]:hover {
+  background-color: #333; /* Darker shade of black on hover */
+}
+
+
+</style>
+<title>WAVD</title>
+</head>
+<body>
+
+<div class="heading" style="margin-top:-40px"> 
+    <h1><span class="text-dark">W</span>
+        <span class="text-dark">A</span>
+        <span class="text-dark">V</span>
+        <span class="text-dark">D</span></h1>
+</div>
+<div class="subheading">
+    <h2><span class="text-dark">Potential Phishing Attempt</span>&emsp; &ensp;
+        <span class="text-dark">SSL/TLS Certificate Validation</span>&emsp; &ensp;
+        <span class="text-dark">Open Redirects</span>&emsp; &ensp;
+        <span class="text-dark">Cross-Site Scripting</span>
+    </h2>
+</div>
+<div id="input-container">
+    <input type="text" name="key" id="key">
+    <input type="submit" value="Go" onclick="changeLocation(); return false;">
+</div>
+<div style="align-items: center; width: 100%; justify-content: center;">
+    <div class="column">
+        <h3 style="margin-top: 0">About:</h3>
+        <p style="font-size: 11pt">
+            <b>WAVD (Web App Vulnerability Detector)</b> is a tool to scan & test URLs for certain vulnerabilities & 
+            security issues by simply inspecting the corresponding client-side website. The overall system includes a 
+            virtual server with modules for detecting the different vulnerabilities, along with a proxy server, to direct 
+            requests from a user's browser to the WAVD virtual server to scan the URL for potential threats & return a 
+            dashboard containing the scan results.
+            <br><br>
+            WAVD scans & detects the following security issues in a website: Absence of Valid SSL/TLS Certificates, 
+            Cross-Site Scripting (XSS), Potential Phishing Attempts & Open Redirection</p>
+    </div>
+    <!-- <div class="column" >
+        <h3 style="margin-top: 0">Instructions for Use:</h3>
+        <p style="font-size: 11pt">
+            To perform a scan for any URL, just append '<b>/&lt;URL&gt;</b>' to the proxy address in the address bar. 
+            <br>
+            <i>(For example, if you wish to perform a scan for 'https://google.co.in', you can append '/https://google.co.in' 
+            to the address bar)</i>
+            
+            <br/><br/>
+
+            WAVD will perform the scan within 10-20 s & return a dashboard containing the details of the potential vulnerabilities in the website.
+        </p>
+    </div> -->
+</div>
+
+<footer style="width:100%; background-color: #030100; text-align: center; color: #fff; padding: 15px; font-size: 11pt; position: fixed; left: 0; bottom: 0;"> 
+   Created by Rohan Sharma, Shubham Yadav, Dhiraj Mishra
+</footer>
+
+<script>
+    function changeLocation() {
+    var textboxpw = document.getElementById("key");
+    window.open('http://localhost:8000/' + textboxpw.value, '_blank');
+}
+</script>
+</body>
+</html>
